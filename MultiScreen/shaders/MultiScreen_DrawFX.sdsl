@@ -3,7 +3,6 @@ shader MultiScreen_DrawFX : VS_PS_Base, ShaderBaseStream, Texturing
 {
     float4x4 Transformation;
     float Gamma = 1;
-    float Gamma2 = 1;
 
     override stage void VSMain()
     {
@@ -14,9 +13,7 @@ shader MultiScreen_DrawFX : VS_PS_Base, ShaderBaseStream, Texturing
     {
         float alpha = clamp(streams.TexCoord.x, 0, 1);
         alpha = pow(alpha, Gamma);
-        alpha = 1-alpha;
-        alpha = pow(alpha, Gamma2);
-        streams.ColorTarget = float4(0, 0, 0, alpha); 
+        streams.ColorTarget = float4(0, 1, 0, alpha); // we multiply our alpha with destination color. source color doesn't matter
         streams.Depth = 1;
     }
 };
