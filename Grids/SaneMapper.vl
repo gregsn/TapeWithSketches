@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="B5V89Zmx2zdMHpXjB0jPNc" LanguageVersion="2021.4.0.268" Version="0.128">
-  <NugetDependency Id="RiYTbywQXvIMiamoOnJ8pV" Location="VL.CoreLib" Version="2021.4.0-0268-g1be600c242" />
+<Document xmlns:p="property" Id="B5V89Zmx2zdMHpXjB0jPNc" LanguageVersion="2021.4.0.285" Version="0.128">
+  <NugetDependency Id="RiYTbywQXvIMiamoOnJ8pV" Location="VL.CoreLib" Version="2021.4.0-0250-g3958a565f9" />
   <Patch Id="Kcg7tChHHPzPB762eQo8Eh">
     <Canvas Id="TSniYbMvtC2ObOQFz5Rhg8" DefaultCategory="Main" CanvasType="FullCategory">
       <!--
@@ -395,7 +395,6 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="B-SplineSurface" />
             </p:NodeReference>
-            <Pin Id="QsKBCnlH6hwOu4MsMFwo2p" Name="Control Points" Kind="InputPin" />
             <Pin Id="LawMw3whRYXNdC80SSksaH" Name="Controlpoint Count" Kind="InputPin" />
             <Pin Id="BcXEjL1PkrWMMPyDRrBii4" Name="Resolution" Kind="InputPin" DefaultValue="27, 44">
               <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
@@ -408,6 +407,7 @@
               </p:TypeAnnotation>
             </Pin>
             <Pin Id="Iyv4ogP08AMPp9XJmC7SiI" Name="Output" Kind="OutputPin" />
+            <Pin Id="QsKBCnlH6hwOu4MsMFwo2p" Name="Control Points" Kind="InputPin" />
           </Node>
           <Node Bounds="460,943,36,19" Id="Oe5KT5NTbIYLd5a4EA50A3">
             <p:NodeReference LastCategoryFullName="Main.GridHelpers" LastSymbolSource="B-Spline.vl">
@@ -939,9 +939,19 @@
                 <ControlPoint Id="DQIiVLfJtteOBp4dud6dgp" Bounds="270,792" Alignment="Bottom" />
               </Node>
               <ControlPoint Id="LcnbMWDDAi7LvNDO7SUcTG" Bounds="481,671" />
+              <Node Bounds="476,785" Id="FEguHCWSsZ2NLq1B22MCuY">
+                <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="Flatten" />
+                  <CategoryReference Kind="RecordType" Name="Spread" NeedsToBeDirectParent="true" />
+                </p:NodeReference>
+                <Pin Id="Pxw8mjMXFIiM0LaBQysFKR" Name="Input" Kind="StateInputPin" />
+                <Pin Id="D19IEZolf8POVZ9W6gN4W4" Name="Output" Kind="StateOutputPin" />
+              </Node>
             </Patch>
             <ControlPoint Id="LiP3eIGUmpBQW3KreKO1Lp" Bounds="500,542" Alignment="Top" />
             <ControlPoint Id="T3wj023etRvMjRKfxh7l8l" Bounds="270,812" Alignment="Bottom" />
+            <ControlPoint Id="DHWMcclOtVYOoHJX1NjTs5" Bounds="452,818" Alignment="Bottom" />
           </Node>
           <Node Bounds="496,165,36,26" Id="LaAulH9F47cOqJMdUGBawI">
             <p:NodeReference LastCategoryFullName="Primitive.Int2" LastSymbolSource="CoreLibBasics.vl">
@@ -1083,12 +1093,14 @@
         <Link Id="VlEo7BQVFFKNG34L6jZcuo" Ids="VUgrJPSe7iJMzLwtAfEzIA,ESzBLoEJpSLPR92a3RBGlT" />
         <Link Id="CIZBvEcDFsqNwXk5Gg1EEa" Ids="AyT1C3NYx29PTo3i9nBg4t,VUrGDvE4A9bPFifIQjNG6b" />
         <Link Id="AN3m2pM8Xn3Pkc4EzPYikX" Ids="T3wj023etRvMjRKfxh7l8l,QsKBCnlH6hwOu4MsMFwo2p" />
+        <Link Id="RWAq5SwH4ntOyLAjGzcCiI" Ids="DQIiVLfJtteOBp4dud6dgp,Pxw8mjMXFIiM0LaBQysFKR" />
+        <Link Id="E9x04EtQcUzNpX5XoyGK5W" Ids="D19IEZolf8POVZ9W6gN4W4,DHWMcclOtVYOoHJX1NjTs5" />
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="DG33eBpVGvANp4nIEXA7ak" Location="VL.CoreLib" Version="2021.4.0-0268-g1be600c242" />
+  <NugetDependency Id="DG33eBpVGvANp4nIEXA7ak" Location="VL.CoreLib" Version="2021.4.0-0250-g3958a565f9" />
   <DocumentDependency Id="FKquvTP0ro8P7lxbmHdOZe" Location="./B-Spline.vl" />
-  <NugetDependency Id="NDFT0FDyy91O92KDVmNRVi" Location="VL.Stride" Version="2021.4.0-0268-g1be600c242" />
-  <NugetDependency Id="TW79TePRNE7M08eneuuyqz" Location="VL.Skia" Version="2021.4.0-0268-g1be600c242" />
-  <NugetDependency Id="CH23sNwwA9bLehQLPOVgGS" Location="VL.EditingFramework" Version="2021.4.0-0268-g1be600c242" />
+  <NugetDependency Id="NDFT0FDyy91O92KDVmNRVi" Location="VL.Stride" Version="2021.4.0-0285-g615a86dc2f" />
+  <NugetDependency Id="TW79TePRNE7M08eneuuyqz" Location="VL.Skia" Version="2021.4.0-0250-g3958a565f9" />
+  <NugetDependency Id="CH23sNwwA9bLehQLPOVgGS" Location="VL.EditingFramework" Version="2021.4.0-0250-g3958a565f9" />
 </Document>
