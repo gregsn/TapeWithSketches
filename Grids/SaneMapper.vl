@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="B5V89Zmx2zdMHpXjB0jPNc" LanguageVersion="2021.4.0.268" Version="0.128">
-  <NugetDependency Id="RiYTbywQXvIMiamoOnJ8pV" Location="VL.CoreLib" Version="2021.4.0-0268-g1be600c242" />
+<Document xmlns:p="property" Id="B5V89Zmx2zdMHpXjB0jPNc" LanguageVersion="2021.4.0.290" Version="0.128">
+  <NugetDependency Id="RiYTbywQXvIMiamoOnJ8pV" Location="VL.CoreLib" Version="2021.4.0-0290-g2254500328" />
   <Patch Id="Kcg7tChHHPzPB762eQo8Eh">
     <Canvas Id="TSniYbMvtC2ObOQFz5Rhg8" DefaultCategory="Main" CanvasType="FullCategory">
       <!--
@@ -178,12 +178,8 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Grid" />
             </p:NodeReference>
+            <Pin Id="BOrdj1uxTMYLdZ0TVKW5oP" Name="Resolution" Kind="InputPin" />
             <Pin Id="Kc0mhpVWbt9MO8UzD2aqka" Name="Points" Kind="InputPin" />
-            <Pin Id="PoektMdgOzfLaGv7YMSWvM" Name="Color" Kind="InputPin" DefaultValue="0.6138005, 0.99, 0, 1">
-              <p:TypeAnnotation LastCategoryFullName="Color" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="RGBA" />
-              </p:TypeAnnotation>
-            </Pin>
             <Pin Id="GMJfcgaGXUiQZnjX2OPG6m" Name="Output" Kind="StateOutputPin" />
           </Node>
           <Node Bounds="79,982,93,26" Id="BZxUdgZ0ifHLRnnF1k45d6">
@@ -307,7 +303,7 @@
                     <Choice Kind="TypeFlag" Name="Float32" />
                   </p:TypeAnnotation>
                 </Pin>
-                <Pin Id="D49cUaYPwsbLzjgvLLVsIx" Name="Width" Kind="InputPin" DefaultValue="-2">
+                <Pin Id="D49cUaYPwsbLzjgvLLVsIx" Name="Width" Kind="InputPin" DefaultValue="2">
                   <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
                     <Choice Kind="TypeFlag" Name="Float32" />
                   </p:TypeAnnotation>
@@ -414,12 +410,8 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="Grid" />
             </p:NodeReference>
+            <Pin Id="P746ixtBNYhLXv96GJlxD7" Name="Resolution" Kind="InputPin" />
             <Pin Id="OFQcz4AOMDOLFQsQ1EcmDZ" Name="Points" Kind="InputPin" />
-            <Pin Id="F1os1yXpoGIPnIXHSGIIqj" Name="Color" Kind="InputPin" DefaultValue="0, 0.52, 0.4264001, 1">
-              <p:TypeAnnotation LastCategoryFullName="Color" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="RGBA" />
-              </p:TypeAnnotation>
-            </Pin>
             <Pin Id="DMbzAw7VOzpOU2xtQCSKHm" Name="Output" Kind="StateOutputPin" />
           </Node>
           <Node Bounds="401,1054,92,19" Id="HDEMvuPth6uLjFv6hc0pqE">
@@ -458,7 +450,7 @@
             <Pin Id="PthWBNbjIICNXRQ9JrzSNh" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="376,988,93,26" Id="SJphhHkhBhnPAU4jkhWINK">
-            <p:NodeReference LastCategoryFullName="Main.Grid" LastSymbolSource="B-Spline.vl">
+            <p:NodeReference LastCategoryFullName="GridHelpers.Grid" LastSymbolSource="B-Spline.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="AsLineList" />
             </p:NodeReference>
@@ -510,7 +502,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="SceneWindow" />
             </p:NodeReference>
-            <Pin Id="PK6V9NnlLwMOJwUCNc7nUv" Name="Bounds" Kind="InputPin" DefaultValue="915, 62.5, 556, 373.5">
+            <Pin Id="PK6V9NnlLwMOJwUCNc7nUv" Name="Bounds" Kind="InputPin" DefaultValue="951.5, 39, 556, 373.5">
               <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
                 <Choice Kind="TypeFlag" Name="Rectangle" />
               </p:TypeAnnotation>
@@ -980,6 +972,7 @@
             <Pin Id="KUTs8KUlclGLhaMNL33YST" Name="Translation" Kind="InputPin" />
             <Pin Id="AyT1C3NYx29PTo3i9nBg4t" Name="Output" Kind="OutputPin" />
           </Node>
+          <ControlPoint Id="JVg3RJBo49rOo9VOrh2YDT" Bounds="534,840" />
         </Canvas>
         <Patch Id="F5dqbOnWQqgMuZvT3saxUW" Name="Create" />
         <Patch Id="IQN2O5br2sNMYChBx0J6yn" Name="Update" />
@@ -1009,8 +1002,6 @@
         <Link Id="EFkNHV80SmJPisHoMO4iai" Ids="SUEkhspf26ILwvoUOmJdX6,MJNZxzHLiqgLhMNzDyZKXB" />
         <Link Id="Rvk2vKq79lUMRmqEntYFXQ" Ids="U29cY08pWIMP0v2G1KAUBL,FzSuawxonaTLUehaymEt1R" />
         <Link Id="T4lt609gqiXP9PxBF1jLjH" Ids="G1UOx4II05lPqVAviHKZ8B,I8zUh4ocSVRNBOxt3h5Bb4" />
-        <Link Id="NTyfn4ZqCX0MkfSLGaXbci" Ids="IsG7B12eVaaLrqnDk51lBB,AgCsLBdALwSOPSPmjvZoB9" />
-        <Link Id="TR1MDsCruGSLMiPXMTLdrY" Ids="RjkTcSNiE2oMPKc4NtEq2W,HrzkO5VQ0uoNgYb85VWtr6" />
         <Link Id="VEzHCxYddaUQRP7Q3GgiAd" Ids="PthWBNbjIICNXRQ9JrzSNh,S2MRvrTajrRP2xf31cqXIa" />
         <Link Id="VihpWd0jAPiLNOe5Fupo11" Ids="Ehjb2BqH5dOMPMyfw2EjXx,B3TrDjMRyiuL7tiYCetg1N" />
         <Link Id="BRU7aL5WNz1MFpvhSw8gl2" Ids="IJ36Za7et05Mmp8tIRx0Iz,EiAyp1R24izNe9yL8lzvwv" />
@@ -1083,12 +1074,16 @@
         <Link Id="VlEo7BQVFFKNG34L6jZcuo" Ids="VUgrJPSe7iJMzLwtAfEzIA,ESzBLoEJpSLPR92a3RBGlT" />
         <Link Id="CIZBvEcDFsqNwXk5Gg1EEa" Ids="AyT1C3NYx29PTo3i9nBg4t,VUrGDvE4A9bPFifIQjNG6b" />
         <Link Id="AN3m2pM8Xn3Pkc4EzPYikX" Ids="T3wj023etRvMjRKfxh7l8l,QsKBCnlH6hwOu4MsMFwo2p" />
+        <Link Id="N6SqmvNEC5cM4XudQckwZU" Ids="RqPblyOgcevNMcITDiB56W,P746ixtBNYhLXv96GJlxD7" />
+        <Link Id="GvKmESHZVjTOB6C3bLV796" Ids="Eo1653QccR2OGDglqyt5LP,JVg3RJBo49rOo9VOrh2YDT,BOrdj1uxTMYLdZ0TVKW5oP" />
+        <Link Id="EjfjlD6O5skLavSWuU5JUu" Ids="IsG7B12eVaaLrqnDk51lBB,Rq8WzCu1aqCOKhfkkYBSSW" />
+        <Link Id="VvvVoAIU0EYQI5e08nxdrT" Ids="RjkTcSNiE2oMPKc4NtEq2W,HrzkO5VQ0uoNgYb85VWtr6" />
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="DG33eBpVGvANp4nIEXA7ak" Location="VL.CoreLib" Version="2021.4.0-0268-g1be600c242" />
+  <NugetDependency Id="DG33eBpVGvANp4nIEXA7ak" Location="VL.CoreLib" Version="2021.4.0-0290-g2254500328" />
   <DocumentDependency Id="FKquvTP0ro8P7lxbmHdOZe" Location="./B-Spline.vl" />
-  <NugetDependency Id="NDFT0FDyy91O92KDVmNRVi" Location="VL.Stride" Version="2021.4.0-0268-g1be600c242" />
-  <NugetDependency Id="TW79TePRNE7M08eneuuyqz" Location="VL.Skia" Version="2021.4.0-0268-g1be600c242" />
-  <NugetDependency Id="CH23sNwwA9bLehQLPOVgGS" Location="VL.EditingFramework" Version="2021.4.0-0268-g1be600c242" />
+  <NugetDependency Id="NDFT0FDyy91O92KDVmNRVi" Location="VL.Stride" Version="2021.4.0-0290-g2254500328" />
+  <NugetDependency Id="TW79TePRNE7M08eneuuyqz" Location="VL.Skia" Version="2021.4.0-0290-g2254500328" />
+  <NugetDependency Id="CH23sNwwA9bLehQLPOVgGS" Location="VL.EditingFramework" Version="2021.4.0-0290-g2254500328" />
 </Document>
